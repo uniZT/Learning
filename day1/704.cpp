@@ -2,6 +2,7 @@
 // Created by unizh on 2023/12/27.
 //
 #include <vector>
+#include <iostream>
 using namespace std;
 int search1(vector<int>& nums, int target) {
     int left = 0;
