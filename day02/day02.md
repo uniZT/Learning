@@ -106,6 +106,7 @@ vector<vector<int>> generateMatrix(int n) {
             stratx++;
             offset++;
         }
+        //其实下面不需要==1也可以的
         if(n%2==1){
             result[mid][mid] = count;
         }
