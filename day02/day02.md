@@ -21,7 +21,7 @@ vector<int> sortedSquares(vector<int>& nums) {
 vector<int> sortedSquares2(vector<int>& nums) {
     int n = nums.size();
     vector<int> result(n);
-    for(int left = 0, right = n - 1, pivot = n - 1; left <= right;){
+    for(int left = 0, right = n - 1, pivot = n - 1; left <= right;){    //这里要等于号不能只小于
         if(nums[left] * nums[left] > nums[right] * nums[right]){
             result[pivot--] = nums[left] * nums[left];
             left++;
@@ -43,8 +43,9 @@ https://leetcode.cn/problems/minimum-size-subarray-sum/description/
 找出该数组中满足其总和大于等于 target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。
 
 用滑动窗口解决问题
-
+```
 #include <cstdint>里面包含了INT32_MAX
+```
 ```c++
 int minSubArrayLen(int target, vector<int>& nums) {
     int result = INT32_MAX;     //最终结果用result保存
