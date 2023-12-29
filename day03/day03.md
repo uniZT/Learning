@@ -142,6 +142,8 @@ https://leetcode.cn/problems/reverse-linked-list/description/
 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
 
 有双指针法和递归解法，递归比较难比较抽象
+
+就是左右指针，左指针一开始在head的左边一个NULL的位置，右指针在head，然后开始向右边走
 ```c++
 ListNode* reverseList(ListNode* head) {
         ListNode* left = NULL;
