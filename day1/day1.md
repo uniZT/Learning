@@ -1,5 +1,5 @@
 ## Part01数组
-### 704二分查找 27移除元素
+### 704二分查找 27移除元素 35 34
 
 
 #### 704
@@ -147,7 +147,7 @@ vector<int> searchRange(vector<int>& nums, int target) {
         while(left <= right){
             int mid = left + (right - left) / 2;
             if(nums[mid] == target){
-                last = mid;         ////这两行是为了让找到最右边的target
+                last = mid;         //这两行是为了让找到最右边的target
                 left = mid + 1;
             }
             else if(nums[mid] > target){
