@@ -101,7 +101,7 @@ int getsum(int n) {
     }
     return sum;
 }
-
+//逻辑就是一直循环，把得到的数放进去，如果有重复了说明进了死循环，如果有1就有结果
 bool isHappy(int n) {
     unordered_set<int> nums;
     while (1) {
@@ -135,6 +135,8 @@ https://leetcode.cn/problems/two-sum/description/
 ```c++
 vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int,int> map;
+        //假设一个[1,2,3,4,5]的找一个7，在这里的话，遍历到2的时候不会返回，但是到5的时候就能返回
+        //因为一开始是没有放进map里面的
         for(int i = 0; i < nums.size(); i++){
             auto iter = map.find(target - nums[i]);
             if(iter != map.end()){
