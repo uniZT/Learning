@@ -49,6 +49,8 @@ https://leetcode.cn/problems/ransom-note/description/
 
 如果可以，返回 true ；否则返回 false 。
 
+=====
+
 magazine 中的每个字符只能在 ransomNote 中使用一次。
 ```c++
 bool canConstruct(string ransomNote, string magazine) {
@@ -77,6 +79,8 @@ https://leetcode.cn/problems/3sum/description/
 给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0 。请
 你返回所有和为 0 且不重复的三元组。
 注意：答案中不可以包含重复的三元组。
+
+=====
 
 这个题目出现在哈希表章节让人很容易想到要用哈希方法去解决，但是实际上哈希解法不仅时间复杂度高，而且去重复杂。
 
@@ -137,6 +141,8 @@ a、b、c 和 d 互不相同
 nums[a] + nums[b] + nums[c] + nums[d] == target
 
 你可以按 任意顺序 返回答案 。
+
+=====
 
 上一题的基础上，剪枝要改变，去重也要改变。
 
