@@ -38,6 +38,7 @@ https://leetcode.cn/problems/repeated-substring-pattern/description/
 给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。
 
 =====
+
 移动匹配的方法假设字符串是s，两个拼起来是s+s，把s+s头尾去掉，只要在中间找到s，那么这个串就符合题目条件
 
 string的find函数，找不到会返回一个string的npos
