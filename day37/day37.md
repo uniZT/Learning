@@ -1,11 +1,8 @@
 # 贪心算法 part06
 ## ● 738.单调递增的数字
 ## ● 968.监控二叉树
-## ● 总结
-
 
 ### 要注意的点
-
 
 ### 738.单调递增的数字
 https://leetcode.cn/problems/monotone-increasing-digits/description/
@@ -96,8 +93,4 @@ int result = 0;
     }
 ```
 
------
-### 总结
 
-
-=====
