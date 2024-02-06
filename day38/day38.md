@@ -61,14 +61,29 @@ https://leetcode.cn/problems/climbing-stairs/
 ```
 
 -----
-### 
+### 746. 使用最小花费爬楼梯
+https://leetcode.cn/problems/min-cost-climbing-stairs/description/
 
+给你一个整数数组 cost ，其中 cost[i] 是从楼梯第 i 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。
+
+你可以选择从下标为 0 或下标为 1 的台阶开始爬楼梯。
+
+请你计算并返回达到楼梯顶部的最低花费。
 
 =====
 
------
-### 
-
-
-=====
+就是求上一步和上上步的最短距离加上他们跨上来的较短的距离
+```c++
+int minCostClimbingStairs(vector<int>& cost) {
+        //dp[i]是到达i的最小距离，dp[i] = min(cost[i - 1] + dp[i - 1], cost[i - 2] + dp[i - 2])
+        //即之前的 dp + 它跨上来的花费，更新为新的dp
+        vector<int> dp(cost.size() + 1);
+        dp[0] = 0;
+        dp[1] = 0;
+        for(int i = 2; i <= cost.size(); i++){
+            dp[i] = min(cost[i - 1] + dp[i - 1], cost[i - 2] + dp[i - 2]);
+        }
+        return dp[cost.size()];
+    }
+```
 
