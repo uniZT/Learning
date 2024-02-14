@@ -1,3 +1,7 @@
+### 万能头文件
+```c++
+#include<bits/stdc++.h>
+```
 ### vector的初始化
 ```c++
 1.默认初始化，size为0
