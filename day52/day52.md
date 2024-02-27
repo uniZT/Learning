@@ -41,6 +41,14 @@ https://leetcode.cn/problems/house-robber-ii/description/
 给定一个代表每个房屋存放金额的非负整数数组，计算你 在不触动警报装置的情况下 ，今晚能够偷窃到的最高金额。
 
 =====
+
+成环的话主要有如下三种情况
+
+情况一：考虑不包含首尾元素
+
+情况二：考虑包含首元素，不包含尾元素
+
+情况三：考虑包含尾元素，不包含首元素
 ```c++
 // 198.打家劫舍的逻辑
     int robRange(vector<int>& nums, int start, int end) {
