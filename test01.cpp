@@ -4,23 +4,25 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include <string>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-int main() {
+struct Number{
+    int x;
+    int y;
+};
 
-    int h;
-    cin >> h;
-    int total = h + (h - 1) * 2;
-    for(int i = 0; i < h; i++){
-        for(int j = 0; j < total; j++){
-            if(j < total - (h + 2 * i)){
-                cout << " ";
-            }
-            else{
-                cout << "*";
-            }
-        }
-        cout << endl;
-    }
+bool cmp(Number a, Number b){
+    if(a.x == b.x) return a.y < b.y;
+    return a.x < b.x;
+}
+
+Number arr[1001];
+
+int main() {
+    char source = 'a';
+    source += 1;
+    cout << source;
     return 0;
 }
